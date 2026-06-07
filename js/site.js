@@ -52,6 +52,24 @@
       loadInto('page-content', content),
     ]);
 
+    activateInjectedImages();
     setActiveNav();
   });
+
+  function activateInjectedImages() {
+    ['page-content', 'page-hero'].forEach(function (id) {
+      var root = document.getElementById(id);
+      if (!root) return;
+
+      root.querySelectorAll('img').forEach(function (img) {
+        img.loading = 'eager';
+        img.decoding = 'async';
+
+        if (img.complete && img.naturalWidth === 0 && img.src) {
+          var src = img.getAttribute('src');
+          if (src) img.src = src;
+        }
+      });
+    });
+  }
 })();
