@@ -241,8 +241,8 @@ PAGES = [
         "title": "Private Driver in Montego Bay for Cruise Passengers",
         "description": "Explore Montego Bay and nearby Jamaica highlights with a private driver tour designed for cruise passengers who want flexibility and comfort.",
         "canonical": "/private-driver-montego-bay/",
-        "preload": "images/montego-bay-coastline.jpg",
-        "og_image": "/images/montego-bay-coastline.jpg",
+        "preload": "images/private-driver.jpg",
+        "og_image": "/images/private-driver.jpg",
         "schemas": [faq_schema(PRIVATE_DRIVER_FAQS)],
     },
 ]
