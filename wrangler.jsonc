@@ -1,0 +1,25 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "montego-bay-shore-excursion",
+  "main": "worker.js",
+  "compatibility_date": "2026-06-06",
+  "workers_dev": true,
+  "observability": { "enabled": true },
+  "assets": {
+    "directory": ".",
+    "binding": "ASSETS",
+    "html_handling": "force-trailing-slash",
+    "not_found_handling": "404-page",
+    "run_worker_first": true
+  },
+  "routes": [
+    {
+      "pattern": "montegobayshoreexcursion.com/*",
+      "zone_name": "montegobayshoreexcursion.com"
+    },
+    {
+      "pattern": "www.montegobayshoreexcursion.com/*",
+      "zone_name": "montegobayshoreexcursion.com"
+    }
+  ]
+}

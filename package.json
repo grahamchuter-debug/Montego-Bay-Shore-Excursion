@@ -1,0 +1,15 @@
+{
+  "name": "montego-bay-shore-excursion",
+  "private": true,
+  "scripts": {
+    "css": "tailwindcss -i ./css/input.css -o ./css/utilities.css --minify && cat css/utilities.css css/site.components.css > css/site.css && cat css/a11y.css >> css/site.css",
+    "build": "npm run css && python3 scripts/build-montego-site.py",
+    "check": "python3 scripts/qa-montego-site.py",
+    "deploy": "wrangler deploy",
+    "preview": "python3 -m http.server 8920"
+  },
+  "devDependencies": {
+    "tailwindcss": "3.4.17",
+    "wrangler": "^4.94.0"
+  }
+}

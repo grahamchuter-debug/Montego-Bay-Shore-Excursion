@@ -1,0 +1,82 @@
+{
+  "domain": "https://montegobayshoreexcursion.com",
+  "phase": "14B",
+  "routes": [
+    {
+      "path": "/",
+      "file": "index.html",
+      "kind": "home"
+    },
+    {
+      "path": "/excursions/",
+      "file": "excursions/index.html",
+      "kind": "hub"
+    },
+    {
+      "path": "/montego-bay-cruise-port-guide/",
+      "file": "montego-bay-cruise-port-guide/index.html",
+      "kind": "guide"
+    },
+    {
+      "path": "/one-day-in-montego-bay-from-cruise-ship/",
+      "file": "one-day-in-montego-bay-from-cruise-ship/index.html",
+      "kind": "guide"
+    },
+    {
+      "path": "/doctors-cave-beach-montego-bay/",
+      "file": "doctors-cave-beach-montego-bay/index.html",
+      "kind": "attraction"
+    },
+    {
+      "path": "/dunns-river-falls-from-montego-bay/",
+      "file": "dunns-river-falls-from-montego-bay/index.html",
+      "kind": "attraction"
+    },
+    {
+      "path": "/rose-hall-great-house-montego-bay/",
+      "file": "rose-hall-great-house-montego-bay/index.html",
+      "kind": "attraction"
+    },
+    {
+      "path": "/green-grotto-caves-montego-bay/",
+      "file": "green-grotto-caves-montego-bay/index.html",
+      "kind": "attraction"
+    },
+    {
+      "path": "/private-driver-montego-bay/",
+      "file": "private-driver-montego-bay/index.html",
+      "kind": "decision"
+    },
+    {
+      "path": "/contact/",
+      "file": "contact/index.html",
+      "kind": "trust"
+    },
+    {
+      "path": "/about/",
+      "file": "about/index.html",
+      "kind": "trust"
+    },
+    {
+      "path": "/privacy/",
+      "file": "privacy/index.html",
+      "kind": "trust"
+    },
+    {
+      "path": "/terms/",
+      "file": "terms/index.html",
+      "kind": "trust"
+    },
+    {
+      "path": "/methodology/",
+      "file": "methodology/index.html",
+      "kind": "trust"
+    },
+    {
+      "path": "/404.html",
+      "file": "404.html",
+      "kind": "error",
+      "sitemap": false
+    }
+  ]
+}

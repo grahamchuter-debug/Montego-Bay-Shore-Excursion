@@ -1,4 +1,6 @@
-tailwind.config = {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ['./*.html', './*/index.html', './js/**/*.js', './scripts/**/*.py'],
   theme: {
     extend: {
       colors: {
@@ -33,5 +35,6 @@ tailwind.config = {
         body:    ['Source Sans 3', 'system-ui', 'sans-serif'],
       },
     }
-  }
+  },
+  plugins: [],
 };
