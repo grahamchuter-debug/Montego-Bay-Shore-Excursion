@@ -67,11 +67,11 @@ function jsonReq(url: string, body: unknown) {
   });
 }
 
-test("LIVE_PAYMENTS_CODE_ENABLED is false for Montego Bay Phase 14D (locked)", () => {
-  assert.equal(LIVE_PAYMENTS_CODE_ENABLED, false);
+test("LIVE_PAYMENTS_CODE_ENABLED is true for Montego Bay Phase 14E (live unlock)", () => {
+  assert.equal(LIVE_PAYMENTS_CODE_ENABLED, true);
 });
 
-test("live checkout blocked while code flag is false", () => {
+test("live checkout allowed when code flag, unlock phrase, and live secrets present", () => {
   const product = findMontegoBayBookingProduct(HIGH)!;
   const block = liveCheckoutBlock(
     {
@@ -85,8 +85,7 @@ test("live checkout blocked while code flag is false", () => {
     },
     product,
   );
-  assert.ok(block);
-  assert.equal(block!.code, "LIVE_PAYMENTS_BLOCKED");
+  assert.equal(block, null);
 });
 
 test("BOOKINGS_ENABLED=false kill switch", () => {
@@ -228,9 +227,9 @@ test("public HTML never leaks SEG / CAMB codes", () => {
   }
 });
 
-test("live-gate source keeps code flag false", () => {
+test("live-gate source keeps code flag true", () => {
   const src = readFileSync(join(ROOT, "workers/bookings/src/live-gate.ts"), "utf8");
-  assert.match(src, /LIVE_PAYMENTS_CODE_ENABLED\s*=\s*false/);
+  assert.match(src, /LIVE_PAYMENTS_CODE_ENABLED\s*=\s*true/);
 });
 
 test("commercial-config has no internal codes", () => {

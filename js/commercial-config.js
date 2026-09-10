@@ -6,11 +6,10 @@
  * - PRODUCTION_READY_LOCKED — journey visible; live Pay & request disabled
  * - BOOKING_ENABLED — checkout allowed against the configured Worker
  *
- * Phase 14D: public config points at TEST Worker; LIVE_PAYMENTS_CODE_ENABLED
- * remains false on prod scaffold. Live unlock is Phase 14E.
+ * Phase 14E: public config points at PROD Worker — two Montego Bay RTB products live.
  */
 window.MGB_COMMERCIAL = {
-  bookingsApiUrl: "https://montego-bay-bookings-test.dark-violet-8d91.workers.dev",
+  bookingsApiUrl: "https://montego-bay-bookings-prod.dark-violet-8d91.workers.dev",
   email: "hello@montegobayshoreexcursion.com",
   siteName: "Montego Bay Shore Excursions",
   defaultPublicBookingStatus: "BOOKING_ENABLED",

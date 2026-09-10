@@ -406,7 +406,7 @@ test("refund J: LIVE header decline without valid operator authorisation — for
   assert.equal(booking?.status, "requested");
 });
 
-test("refund live path: tokenised LIVE review blocked while LIVE_PAYMENTS_CODE_ENABLED is false", async () => {
+test("refund live path: tokenised LIVE review allowed when LIVE_PAYMENTS_CODE_ENABLED is true", async () => {
   const db = createMemoryD1();
   const env = baseEnv(db, {
     PAYMENTS_MODE: "live",
@@ -421,9 +421,9 @@ test("refund live path: tokenised LIVE review blocked while LIVE_PAYMENTS_CODE_E
     ),
     env,
   );
-  assert.equal(page.status, 503);
+  assert.equal(page.status, 200);
   const html = await page.text();
-  assert.match(html, /not available|live payments code flag/i);
+  assert.match(html, /Decline|refund|Confirm/i);
 });
 
 
