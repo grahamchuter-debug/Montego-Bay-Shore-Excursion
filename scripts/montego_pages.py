@@ -609,7 +609,7 @@ def doctors_cave() -> PageTuple:
         image=DOCTORS_CAVE,
         aria_label=DOCTORS_CAVE_ALT,
         breadcrumb="Doctor's Cave Beach",
-        actions=_cta("/excursions/", "Compare styles", "/one-day-in-montego-bay-from-cruise-ship/", "One-day plans"),
+        actions=_cta("/book/highlights-and-beach-break/", "Book now", "/excursions/", "Compare styles"),
     )
 
     snap = cruise_snapshot(
@@ -655,6 +655,12 @@ def doctors_cave() -> PageTuple:
   <strong>Do you want swimming more than sightseeing?</strong> Choose the beach.
   <strong>Do you want plantation history the same day?</strong> Rose Hall can pair if you keep lunch and shopping short.
   <strong>Do you want Dunn's River?</strong> That is a different day shape — see the Dunn's-from-MoBay guide instead of forcing both.
+</p>
+<p class="text-gray-600 leading-relaxed mb-4">
+  Prefer a guided highlights day that includes Doctor's Cave Bathing Beach (not a beach-only transfer)?
+  You can
+  <a href="/book/highlights-and-beach-break/" class="text-ocean-600 font-semibold">Book now</a>
+  — payment secures a request; confirmation follows separately.
 </p>
 <h2 class="text-2xl font-display font-bold text-gray-900 mb-4 mt-10">Who it suits</h2>
 <p class="text-gray-600 leading-relaxed mb-4">
@@ -826,7 +832,7 @@ def rose_hall() -> PageTuple:
         image=ROSE_HALL,
         aria_label=ROSE_HALL_ALT,
         breadcrumb="Rose Hall Great House",
-        actions=_cta("/doctors-cave-beach-montego-bay/", "Pair with beach?", "/excursions/", "Compare styles"),
+        actions=_cta("/book/rose-hall-great-house-and-highlights/", "Book now", "/excursions/", "Compare styles"),
     )
 
     snap = cruise_snapshot(
@@ -867,9 +873,12 @@ def rose_hall() -> PageTuple:
   Morning house tour, afternoon
   <a href="/doctors-cave-beach-montego-bay/" class="text-ocean-600 font-medium">Doctor's Cave</a>
   is a common shape when the call is mid-length. Adding Dunn's River on top usually breaks the day.
-  A
-  <a href="/private-driver-montego-bay/" class="text-ocean-600 font-medium">private driver day</a>
-  can help with pacing between nearby stops — still without treating this site as a booking desk.
+</p>
+<p class="text-gray-600 leading-relaxed mb-4">
+  Prefer a guided highlights excursion that includes Rose Hall Great House entrance (not merely a ticket)?
+  You can
+  <a href="/book/rose-hall-great-house-and-highlights/" class="text-ocean-600 font-semibold">Book now</a>
+  — payment secures a request; confirmation follows separately. Allow around 5–6 hours.
 </p>
 <h2 class="text-2xl font-display font-bold text-gray-900 mb-4 mt-10">Who it suits</h2>
 <p class="text-gray-600 leading-relaxed mb-4">

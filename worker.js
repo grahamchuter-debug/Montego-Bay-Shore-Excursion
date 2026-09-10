@@ -2,6 +2,8 @@
  * Montego Bay Shore Excursion — Workers Assets entry.
  * www → apex (one hop); .html → trailing-slash path (one hop); combined when both apply.
  * Query strings preserved. Soft homepage 404s eliminated via ASSETS 404-page.
+ * Phase 14D: /book/{slug}/ served by Workers Assets (force-trailing-slash → index.html).
+ * Do NOT rewrite book paths to …/index.html here — that loops with force-trailing-slash.
  */
 const APEX_HOST = 'montegobayshoreexcursion.com';
 

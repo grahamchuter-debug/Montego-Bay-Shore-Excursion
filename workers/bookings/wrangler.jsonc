@@ -1,0 +1,36 @@
+{
+  "$schema": "../../node_modules/wrangler/config-schema.json",
+  "name": "montego-bay-bookings-test",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-09-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": {
+    "enabled": true
+  },
+  "dev": {
+    "ip": "localhost",
+    "port": 8795,
+    "local_protocol": "http"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "montego-bay-bookings-test",
+      "database_id": "9bd1fbdd-3757-41e8-afc7-72fedc614c08",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "vars": {
+    "PAYMENTS_MODE": "test",
+    "BOOKINGS_ENABLED": "true",
+    "EMAIL_SENDING_ENABLED": "false",
+    "EMAIL_FROM": "bookings@notifications.wowatour.com",
+    "EMAIL_FROM_NAME": "Montego Bay Shore Excursions",
+    "EMAIL_REPLY_TO": "hello@montegobayshoreexcursion.com",
+    "CORS_ALLOWED_ORIGINS": "http://localhost:8920,http://127.0.0.1:8920,https://montegobayshoreexcursion.com,https://www.montegobayshoreexcursion.com",
+    "SITE_BASE_URL": "https://montegobayshoreexcursion.com",
+    "ORIGINATING_SITE": "montegobayshoreexcursion.com",
+    "ORIGINATING_PORT": "Montego Bay, Jamaica",
+    "OPERATOR_PORTAL_BASE_URL": "https://montego-bay-bookings-test.dark-violet-8d91.workers.dev"
+  }
+}

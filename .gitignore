@@ -5,3 +5,8 @@ css/input.css
 css/utilities.css
 css/site.components.css
 package-lock.json
+.dev.vars
+.env
+.env.*
+workers/bookings/.dev.vars
+*.pem

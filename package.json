@@ -1,15 +1,29 @@
 {
   "name": "montego-bay-shore-excursion",
   "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
   "scripts": {
     "css": "tailwindcss -i ./css/input.css -o ./css/utilities.css --minify && cat css/utilities.css css/site.components.css > css/site.css && cat css/a11y.css >> css/site.css",
-    "build": "npm run css && python3 scripts/build-montego-site.py",
+    "build": "npm run css && python3 scripts/build-montego-site.py && python3 scripts/generate-book-pages.py",
     "check": "python3 scripts/qa-montego-site.py",
-    "deploy": "wrangler deploy",
-    "preview": "python3 -m http.server 8920"
+    "deploy": "npm run build && npm run check && wrangler deploy",
+    "preview": "python3 -m http.server 8920",
+    "test:booking": "npx --yes tsx --test shared/world-booking/booking.test.ts shared/world-booking/date-picker.test.ts workers/bookings/src/montego-bay-security.test.ts workers/bookings/src/operator-refund.test.ts",
+    "bookings:dev": "wrangler dev --config workers/bookings/wrangler.jsonc --port 8795",
+    "bookings:migrate:test": "wrangler d1 migrations apply montego-bay-bookings-test --remote --config workers/bookings/wrangler.jsonc",
+    "bookings:migrate:prod": "wrangler d1 migrations apply montego-bay-bookings-prod --remote --config workers/bookings/wrangler.prod.jsonc",
+    "bookings:deploy:test": "wrangler deploy --config workers/bookings/wrangler.jsonc",
+    "bookings:deploy:prod": "wrangler deploy --config workers/bookings/wrangler.prod.jsonc"
+  },
+  "dependencies": {
+    "stripe": "^22.6.1"
   },
   "devDependencies": {
     "tailwindcss": "3.4.17",
+    "typescript": "^5.9.3",
     "wrangler": "^4.94.0"
   }
 }

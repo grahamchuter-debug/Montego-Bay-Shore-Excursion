@@ -69,7 +69,7 @@ def footer_html() -> str:
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
       <div class="sm:col-span-2 lg:col-span-1">
         <a href="/" class="font-display font-semibold text-white text-lg">{SITE}</a>
-        <p class="mt-3 text-sm leading-relaxed">Independent planning guide for cruise passengers calling at Montego Bay, Jamaica. Editorial advice only — not affiliated with any cruise line. We do not take bookings on this site in this phase.</p>
+        <p class="mt-3 text-sm leading-relaxed">Independent planning guide for cruise passengers calling at Montego Bay, Jamaica. Editorial advice with select request-to-book excursions. Not affiliated with any cruise line.</p>
         <p class="mt-3 text-sm"><a href="mailto:{EMAIL}" class="hover:text-white transition-colors">{EMAIL}</a></p>
       </div>
       <div>
